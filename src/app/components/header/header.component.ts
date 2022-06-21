@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { Component } from '@angular/core';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
     languages = [
         { label: 'English', value: 'en-us' },
@@ -14,12 +14,10 @@ export class HeaderComponent implements OnInit {
         { label: 'Germany', value: 'de-de' },
     ];
 
-    constructor(private translateService: TranslateService) { }
-
-    ngOnInit(): void { }
+    constructor(private localStorageService: LocalStorageService) { }
 
     languageSelect(event: any) {
-        this.translateService.use(event.target.value);
+        this.localStorageService.setLocalStorage(event.target.value);
     }
 
 }
