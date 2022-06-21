@@ -1,22 +1,5 @@
 <app-header></app-header>
 <main class="container">
-
-    <h1 class="h5">{{ 'HOME.pageTitle' | translate }}</h1>
-
-    <h2 class="h6">{{ 'HOME.byLine' | translate }}</h2>
-
-    <div [innerHTML]="'HOME.featuredStory' | translate"></div>
-
-    <ul>
-        <li>
-            <a href="https://github.com/ngx-translate/core" target="_blank" rel="noopener noreferrer">See ngx-translate
-                core</a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/watch?v=jCvsy4XSOEQ" target="_blank" rel="noopener noreferrer">Angular
-                Internationalization / i18n - Using ngx-translate & Phrase</a>
-        </li>
-    </ul>
-
+    <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
