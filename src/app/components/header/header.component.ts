@@ -8,16 +8,17 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class HeaderComponent {
 
-    languages = [
-        { label: 'English', value: 'en-us' },
-        { label: 'French', value: 'fr-fr' },
-        { label: 'Germany', value: 'de-de' },
-    ];
+    // languages = [
+    //     { label: 'English', value: 'en-us' },
+    //     { label: 'French', value: 'fr-fr' },
+    //     { label: 'Germany', value: 'de-de' },
+    // ];
 
     constructor(private localStorageService: LocalStorageService) { }
 
     languageSelect(event: any) {
-        this.localStorageService.setLocalStorage(event.target.value);
+        const locale = event.target.value;
+        if (locale !== '') this.localStorageService.setLocalStorage(locale);
     }
 
 }
