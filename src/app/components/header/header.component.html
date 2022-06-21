@@ -1,25 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">{{'HEADER.nav.home' | translate}}</a>
-                <a class="nav-link" href="#">{{'HEADER.nav.resources' | translate}}</a>
+<div class="container mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">{{'HEADER.nav.home' | translate}}</a>
+                    <a class="nav-link" href="#">{{'HEADER.nav.resources' | translate}}</a>
+                </div>
             </div>
-        </div>
 
-        <!-- select lang-->
-        <form>
-            <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
-                <option value="" selected>{{'HEADER.dropdown.title' | translate}}</option>
-                <option value="en-us">{{'HEADER.dropdown.English' | translate}}</option>
-                <option value="fr-fr">{{'HEADER.dropdown.French' | translate}}</option>
-                <option value="de-de">{{'HEADER.dropdown.German' | translate}}</option>
-            </select>
-        </form>
-    </div>
-</nav>
+            <!-- select lang-->
+            <form class="d-md-flex align-content-md-center">
+                <div class="text-light text-nowrap pt-2 me-3">{{'HEADER.dropdown.title' | translate}}</div>
+                <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
+                    <option value="" selected>{{'HEADER.dropdown.title' | translate}}</option>
+                    <option value="en-us">{{'HEADER.dropdown.English' | translate}}</option>
+                    <option value="fr-fr">{{'HEADER.dropdown.French' | translate}}</option>
+                    <option value="de-de">{{'HEADER.dropdown.German' | translate}}</option>
+                </select>
+            </form>
+        </div>
+    </nav>
+</div>
