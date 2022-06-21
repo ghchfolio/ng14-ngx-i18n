@@ -2,7 +2,8 @@
     "HEADER": {
         "nav": {
             "home": "Maison",
-            "resources": "Ressources"
+            "resources": "Ressources",
+            "about": "À propos de"
         },
         "dropdown": {
             "title": "Choisissez une langue",

@@ -4,9 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
-    // { path: 'reports', loadChildren: () => import('./modules/reports/reports.module').then(m => m.ReportsModule) },
-    // { path: 'classrooms', loadChildren: () => import('./modules/classrooms/classrooms.module').then(m => m.ClassroomsModule) },
-    // { path: 'exds', loadChildren: () => import('./modules/exds/exds.module').then(m => m.ExdsModule) },
+    { path: 'resources', loadChildren: () => import('./modules/resources/resources.module').then(m => m.ResourcesModule) },
+    { path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule) },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomeComponent },
 ];
