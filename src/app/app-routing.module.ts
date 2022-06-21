@@ -4,8 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'resources', loadChildren: () => import('./modules/resources/resources.module').then(m => m.ResourcesModule) },
-    { path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule) },
+    { path: 'resources', loadChildren: () => import('./modules/resources/resources.module').then(m => m.ResourcesRoutingModule) },
+    { path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutRoutingModule) },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomeComponent },
 ];
