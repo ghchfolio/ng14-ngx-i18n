@@ -3,6 +3,12 @@
         "nav": {
             "home": "Heim",
             "resources": "Ressourcen"
+        },
+        "dropdown": {
+            "title": "Wählen Sie eine Sprache",
+            "English": "Englisch",
+            "French": "Französisch",
+            "German": "Deutsch"
         }
     },
     "HOME": {

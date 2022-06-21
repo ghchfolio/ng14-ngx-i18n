@@ -15,10 +15,10 @@
         <!-- select lang-->
         <form>
             <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
-                <option value="" selected>Choose Language</option>
-                <ng-container *ngFor="let l of languages">
-                    <option [value]="l.value">{{ l.label }}</option>
-                </ng-container>
+                <option value="" selected>{{'HEADER.dropdown.title' | translate}}</option>
+                <option value="en-us">{{'HEADER.dropdown.English' | translate}}</option>
+                <option value="fr-fr">{{'HEADER.dropdown.French' | translate}}</option>
+                <option value="de-de">{{'HEADER.dropdown.German' | translate}}</option>
             </select>
         </form>
     </div>
