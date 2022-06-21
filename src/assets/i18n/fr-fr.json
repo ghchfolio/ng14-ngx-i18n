@@ -14,6 +14,9 @@
     "HOME": {
         "pageTitle": "Le garçon et les avelines",
         "byLine": "Aesop",
+        "image": {
+            "alt": "Avelines"
+        },
         "featuredStory": "<p>Un garçon a reçu la permission de mettre sa main dans un pichet pour obtenir des avelines. Mais il en prit une si grande poignée qu'il ne put plus retirer sa main. Il se tenait là, ne voulant pas abandonner un seul aveline et pourtant incapable de les sortir tous d'un coup. Vexé et déçu, il se mit à pleurer.</p><p>&quot;Mon garçon,&quot; dit sa mère, &quot;contentez-vous de la moitié des noix que vous avez prises et vous sortirez facilement votre main. Alors peut-être aurez-vous encore quelques avelines une autre fois.&quot;</p><p><em>N'essayez pas trop à la fois.</em></p>"
     },
     "FOOTER": "Droits d'auteur"
