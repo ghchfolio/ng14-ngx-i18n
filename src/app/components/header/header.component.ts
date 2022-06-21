@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
     languages = [
         { label: 'English', value: 'en-us' },
         { label: 'French', value: 'fr-fr' },
-        { label: 'Germany', value: 'de-fr' },
+        { label: 'Germany', value: 'de-de' },
     ];
 
     constructor(private translateService: TranslateService) { }
