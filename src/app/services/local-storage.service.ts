@@ -12,19 +12,16 @@ export class LocalStorageService {
 
   checkLocalStorage() {
     if (localStorage['languagePref']) {
-      let y = localStorage['languagePref'];
-      this.translateService.use(y);
-      console.log('you have langPref', y)
+      let ls = localStorage['languagePref'];
+      this.translateService.use(ls);
     } else {
-      let x = this.translateService.defaultLang;
-      localStorage['languagePref'] = x;
-      console.log('langPref not exist stting to default', x)
+      let ls = this.translateService.defaultLang;
+      localStorage['languagePref'] = ls;
     }
   }
 
   setLocalStorage(lang: any) {
     localStorage['languagePref'] = lang;
-    console.log('updating langPref to', lang)
     this.translateService.use(localStorage['languagePref']);
   }
 
