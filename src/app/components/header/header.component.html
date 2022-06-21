@@ -16,11 +16,11 @@
         <!-- select lang-->
         <div>
             <form>
-                <select class="form-select" aria-label="Choose Language">
-                    <option selected>Choose Language</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
+                    <option value="" selected>Choose Language</option>
+                    <ng-container *ngFor="let l of languages">
+                        <option [value]="l.value">{{ l.label }}</option>
+                    </ng-container>
                 </select>
             </form>
         </div>

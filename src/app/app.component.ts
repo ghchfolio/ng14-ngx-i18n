@@ -7,11 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    langMenu = [
-        { label: 'English', value: 'en' },
-        { label: 'French', value: 'fr' },
-        { label: 'Germany', value: 'de' },
-    ];
+
 
     constructor() {
     }
