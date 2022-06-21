@@ -7,22 +7,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                <a class="nav-link" href="#">Resources</a>
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link active" aria-current="page" href="#">{{'HEADER.nav.home' | translate}}</a>
+                <a class="nav-link" href="#">{{'HEADER.nav.resources' | translate}}</a>
             </div>
         </div>
 
         <!-- select lang-->
-        <div>
-            <form>
-                <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
-                    <option value="" selected>Choose Language</option>
-                    <ng-container *ngFor="let l of languages">
-                        <option [value]="l.value">{{ l.label }}</option>
-                    </ng-container>
-                </select>
-            </form>
-        </div>
+        <form>
+            <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
+                <option value="" selected>Choose Language</option>
+                <ng-container *ngFor="let l of languages">
+                    <option [value]="l.value">{{ l.label }}</option>
+                </ng-container>
+            </select>
+        </form>
     </div>
 </nav>
