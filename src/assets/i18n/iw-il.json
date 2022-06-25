@@ -1,0 +1,26 @@
+{
+    "HEADER": {
+        "nav": {
+            "home": "בית",
+            "resources": "אֶמְצָעִי",
+            "about": "על אודות"
+        },
+        "dropdown": {
+            "title": "בחר שפה",
+            "English": "אנגלית",
+            "French": "צָרְפָתִית",
+            "German": "גֶרמָנִיָת",
+            "Hebrew": "עִברִיתת"
+        }
+    },
+    "HOME": {
+        "pageTitle": "הילד והפילברטים",
+        "byLine": "על ידי",
+        "image": {
+            "alt": "פילברטים"
+        },
+        "featuredStory": "<p>ילד קיבל אישור להכניס את ידו לתוך כד כדי להביא כמה פילברטים. אבל הוא לקח אגרוף כה גדול עד שלא יכול היה להוציא את ידו שוב. שם הוא עמד, לא מוכן לוותר על אף פילברט ובכל זאת לא הצליח להוציא את כולם בבת אחת. עצבני ומאוכזב הוא התחיל לבכות.</p><p>&quot;הילד שלי,&quot; אמרה אמו, &quot;תסתפק במחצית מהאגוזים שלקחת ותוציא את ידך בקלות. אז אולי יש לך עוד כמה פילברטים בפעם אחרת.&quot;</p> <p><em>אל תנסה יותר מדי בבת אחת.</em></p>"
+    },
+    "ABOUT": "<p>אפליקציית Angular 14 זו מהווה הוכחה לקונספט ומשתמשת בחבילת ngx-translate כדי לתרגם את העותק.</p><p>זה מיועד לשימוש בכתובת <a href=\"https://www. istation.com\" target=\"_blank\" rel=\"noopener noreferrer\">iStation.com</a>.</p><p>עיין ב<a href=\"https://www. istation.com/SupportFAQ\" target=\"_blank\" rel=\"noopener noreferrer\">טיפים מהירים ושאלות נפוצות</a> לקבלת עזרה בתחילת העבודה.</p><p>האם עליך להוריד Istation? עבור לדף <a href=\"https://www.istation.com/Support/FAQ\" target=\"_blank\" rel=\"noopener noreferrer\">הורדה ומידע טכני</a> שלנו. </p>",
+    "FOOTER": "זכויות יוצרים"
+}
