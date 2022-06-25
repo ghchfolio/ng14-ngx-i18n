@@ -21,11 +21,13 @@
             <!-- select lang-->
             <form class="d-md-flex align-content-md-center">
                 <div class="text-light text-nowrap pt-2 me-3">{{'HEADER.dropdown.title' | translate}}</div>
-                <select class="form-select" aria-label="Choose Language" (change)="languageSelect($event)">
+                <select class="form-select" attr.aria-label="{{'HEADER.dropdown.title' | translate}}"
+                    (change)="languageSelect($event)">
                     <option value="" selected>{{'HEADER.dropdown.title' | translate}}</option>
                     <option value="en-us">{{'HEADER.dropdown.English' | translate}}</option>
                     <option value="fr-fr">{{'HEADER.dropdown.French' | translate}}</option>
                     <option value="de-de">{{'HEADER.dropdown.German' | translate}}</option>
+                    <option value="iw-il">{{'HEADER.dropdown.Hebrew' | translate}}</option>
                 </select>
             </form>
         </div>
