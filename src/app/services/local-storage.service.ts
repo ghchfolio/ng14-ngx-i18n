@@ -12,16 +12,14 @@ export class LocalStorageService {
 
     checkLocalStorage() {
         if (localStorage['languagePref']) {
-            let ls = localStorage['languagePref'];
-            this.translateService.use(ls);
+            this.translateService.use(localStorage['languagePref']);
         } else {
-            let ls = this.translateService.defaultLang;
-            localStorage['languagePref'] = ls;
+            this.setLocalStorage(this.translateService.defaultLang);
         }
     }
 
-    setLocalStorage(lang: any) {
-        localStorage['languagePref'] = lang;
+    setLocalStorage(languagePref: string) {
+        localStorage['languagePref'] = languagePref;
         this.translateService.use(localStorage['languagePref']);
     }
 
