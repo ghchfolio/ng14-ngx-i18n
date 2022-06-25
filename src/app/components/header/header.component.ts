@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
@@ -8,17 +9,22 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class HeaderComponent {
 
-    // languages = [
-    //     { label: 'English', value: 'en-us' },
-    //     { label: 'French', value: 'fr-fr' },
-    //     { label: 'Germany', value: 'de-de' },
-    // ];
+    languages = [
+        { locale: 'en-us', name: 'English' },
+        { locale: 'fr-fr', name: 'French', },
+        { locale: 'de-de', name: 'German' },
+        { locale: 'iw-il', name: 'Hebrew' }
+    ];
+    currentLang = '';
+    langChangeSub = this.translateService.onLangChange.subscribe(res => this.currentLang = res.lang);
 
-    constructor(private localStorageService: LocalStorageService) { }
+    constructor(private localStorageService: LocalStorageService, private translateService: TranslateService) { }
 
-    languageSelect(event: any) {
-        const locale = event.target.value;
-        if (locale !== '') this.localStorageService.setLocalStorage(locale);
+    languageSelect(locale: string = 'us-en') {
+        this.localStorageService.setLocalStorage(locale);
     }
 
+    ngOnDestroy() {
+        this.langChangeSub.unsubscribe();
+    }
 }
