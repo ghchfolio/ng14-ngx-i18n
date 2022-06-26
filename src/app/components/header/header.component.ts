@@ -13,7 +13,8 @@ export class HeaderComponent {
         { locale: 'en-us', name: 'English' },
         { locale: 'fr-fr', name: 'French', },
         { locale: 'de-de', name: 'German' },
-        { locale: 'iw-il', name: 'Hebrew' }
+        { locale: 'iw-il', name: 'Hebrew' },
+        { locale: 'es-es', name: 'Spanish' }
     ];
     currentLang = '';
     langChangeSub = this.translateService.onLangChange.subscribe(res => this.currentLang = res.lang);

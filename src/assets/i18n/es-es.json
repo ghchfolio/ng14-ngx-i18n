@@ -1,0 +1,27 @@
+{
+    "HEADER": {
+        "nav": {
+            "home": "Hogar",
+            "resources": "Resources",
+            "about": "Sobre"
+        },
+        "dropdown": {
+            "title": "Elige un idioma",
+            "English": "Inglés",
+            "French": "Francés",
+            "German": "Alemán",
+            "Hebrew": "Hebreo",
+            "Spanish": "Español"
+        }
+    },
+    "HOME": {
+        "pageTitle": "El niño y las Avellanas",
+        "byLine": "por",
+        "image": {
+            "alt": "Avellanas"
+        },
+        "featuredStory": "<p>A un niño se le dio permiso para meter la mano en un cántaro para sacar unas avellanas. Pero tomó un puñado tan grande que no pudo volver a sacar la mano. Allí estaba, sin querer renunciar a una sola avellana y, sin embargo, incapaz de sacarlas todas a la vez. Molesto y decepcionado, comenzó a llorar.</p><p>&quot;Mi hijo&quot; dijo su madre, &quot;confórmate con la mitad de las nueces que has tomado y fácilmente sacarás la mano. Entonces tal vez puedas tener más avellanas en otro momento&quot;.</p><p><em>No intentes demasiado a la vez.</em></p>"
+    },
+    "ABOUT": "<p>Esta aplicación de Angular 14 es una prueba de concepto y utiliza el paquete ngx-translate para traducir la copia.</p><p>Está diseñada para usarse en <a href=\"https://www. istation.com\" target=\"_blank\" rel=\"noopener noreferrer\">iStation.com</a>.</p><p>Consulte nuestro <a href=\"https://www. istation.com/SupportFAQ\" target=\"_blank\" rel=\"noopener noreferrer\">consejos rápidos y preguntas frecuentes</a> para obtener ayuda para comenzar.</p><p>¿Necesita descargar ¿Estación? Vaya a nuestra página de <a href=\"https://www.istation.com/Support/FAQ\" target=\"_blank\" rel=\"noopener noreferrer\">Descarga e información técnica</a>. </p>",
+    "FOOTER": "Derechos de autor"
+}

@@ -10,11 +10,12 @@
             "English": "Anglais",
             "French": "Français",
             "German": "Allemand",
-            "Hebrew": "Hébreu"
+            "Hebrew": "Hébreu",
+            "Spanish": "Espagnol"
         }
     },
     "HOME": {
-        "pageTitle": "Le garçon et les avelines",
+        "pageTitle": "Le garçon et les Avelines",
         "byLine": "par",
         "image": {
             "alt": "Avelines"
