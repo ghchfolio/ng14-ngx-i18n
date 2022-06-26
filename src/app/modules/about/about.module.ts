@@ -6,14 +6,13 @@ import { AboutComponent } from './about.component';
 const routes: Routes = [{ path: '', component: AboutComponent }];
 
 @NgModule({
-    imports: [
-        RouterModule.forChild(routes),
-        TranslateModule.forChild({ isolate: false })
-    ],
-    exports: [RouterModule],
-    declarations: [
-        AboutComponent
-    ]
+   imports: [
+      RouterModule.forChild(routes),
+      TranslateModule.forChild({ isolate: false })
+   ],
+   exports: [RouterModule],
+   declarations: [
+      AboutComponent
+   ]
 })
 export class AboutRoutingModule { }
-// TODO add MissingTranslationHandler
