@@ -16,13 +16,24 @@ export class HeaderComponent {
         { locale: 'iw-il', name: 'Hebrew' },
         { locale: 'es-es', name: 'Spanish' }
     ];
+
     currentLang = '';
-    langChangeSub = this.translateService.onLangChange.subscribe(res => this.currentLang = res.lang);
+    altText = '';
+
+    langChangeSub = this.translateService.onLangChange.subscribe(res => {
+        this.currentLang = res.lang;
+        this.setFlagAltText();
+    });
 
     constructor(private localStorageService: LocalStorageService, private translateService: TranslateService) { }
 
     languageSelect(locale: string = 'us-en') {
         this.localStorageService.setLocalStorage(locale);
+    }
+
+    setFlagAltText() {
+        const locale = this.languages.find((item) => item.locale === this.currentLang);
+        locale !== undefined ? this.altText = locale.name : this.altText = 'English';
     }
 
     ngOnDestroy() {
