@@ -1,5 +1,6 @@
 {
     "HEADER": {
+        "hamburger-icon-aria-label": "Navigation umschalten",
         "nav": {
             "home": "Heim",
             "resources": "Ressourcen",

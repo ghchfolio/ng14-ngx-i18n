@@ -1,5 +1,6 @@
 {
     "HEADER": {
+        "hamburger-icon-aria-label": "Navegación de palanca",
         "nav": {
             "home": "Hogar",
             "resources": "Resources",
