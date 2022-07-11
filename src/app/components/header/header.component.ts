@@ -16,16 +16,16 @@ export class HeaderComponent {
         { locale: 'iw-il', name: 'Hebrew' },
         { locale: 'es-es', name: 'Spanish' }
     ];
-    currentLang = '';
-    langChangeSub = this.translateService.onLangChange.subscribe(res => this.currentLang = res.lang);
 
-    constructor(private localStorageService: LocalStorageService, private translateService: TranslateService) { }
+    // currentLang = this.translateService.currentLang || this.translateService.defaultLang;
+    currentLang = this.localStorageService.currentLang;
+
+    constructor(
+        private localStorageService: LocalStorageService, private translateService: TranslateService) {
+    }
 
     languageSelect(locale: string = 'us-en') {
         this.localStorageService.setLocalStorage(locale);
     }
 
-    ngOnDestroy() {
-        this.langChangeSub.unsubscribe();
-    }
 }

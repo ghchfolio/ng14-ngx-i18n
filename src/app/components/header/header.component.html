@@ -1,50 +1,50 @@
 <div class="container mb-4">
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
 
-         <!-- hamburger icon -->
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
+            <!-- hamburger icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-         <!-- nav links  -->
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-               <a class="nav-link active" aria-current="page" [routerLink]="['/home']"
-                  routerLinkActive="active">{{'HEADER.nav.home' |
-                  translate}}</a>
-               <a class="nav-link" routerLink="/about" routerLinkActive="active">{{'HEADER.nav.about' |
-                  translate}}</a>
+            <!-- nav links  -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['/home']"
+                        routerLinkActive="active">{{'header.nav.home' |
+                        translate}}</a>
+                    <a class="nav-link" routerLink="/about" routerLinkActive="active">{{'header.nav.about' |
+                        translate}}</a>
+                </div>
+
             </div>
 
-         </div>
+            <!-- language select and country flag -->
+            <div class="d-flex align-content-center">
 
-         <!-- language select and country flag -->
-         <div class="d-flex align-content-center">
+                <!-- language select drop down -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{'header.dropdown.title' | translate}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li *ngFor="let l of languages">
+                            <a class="dropdown-item" href="#" (click)="languageSelect(l.locale)">
+                                <img src="{{'assets/flags/' + l.locale + '.png'}}" alt="country flag" class="me-2"
+                                    title="country flag" style="height:20px; width:auto;">
+                                {{'header.dropdown.' + l.name | translate}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- language select drop down -->
-            <div class="dropdown">
-               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  {{'HEADER.dropdown.title' | translate}}
-               </button>
-               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li *ngFor="let l of languages">
-                     <a class="dropdown-item" href="#" (click)="languageSelect(l.locale)">
-                        <img src="{{'assets/flags/' + l.locale + '.png'}}" alt="country flag" class="me-2"
-                           title="country flag" style="height:20px; width:auto;">
-                        {{'HEADER.dropdown.' + l.name | translate}}
-                     </a>
-                  </li>
-               </ul>
+                <!-- flag of the selected language -->
+                <img src="{{'assets/flags/' + currentLang + '.png'}}" alt="country flag" class="ms-2"
+                    title="country flag" style="height:38px; width:auto;" *ngIf="currentLang !== undefined">
             </div>
 
-            <!-- flag of the selected language -->
-            <img src="{{'assets/flags/' + currentLang + '.png'}}" alt="country flag" class="ms-2" title="country flag"
-               style="height:38px; width:auto;" *ngIf="currentLang !== ''">
-         </div>
-
-      </div>
-   </nav>
+        </div>
+    </nav>
 </div>
