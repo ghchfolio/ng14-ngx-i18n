@@ -17,7 +17,6 @@ export class HeaderComponent {
         { locale: 'es-es', name: 'Spanish' }
     ];
 
-    // currentLang = this.translateService.currentLang || this.translateService.defaultLang;
     currentLang = this.localStorageService.currentLang;
 
     constructor(
