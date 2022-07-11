@@ -13,7 +13,6 @@ export class CustomLoader implements TranslateLoader {
 
     getTranslation(lang: string): Observable<any> {
 
-        let arr = lang.split('_');
         const header$ = this.http.get(Resources.headerPartial);
         const body$ = this.http.get(Resources.bodyPartial);
         const footer$ = this.http.get(Resources.footerPartial);
