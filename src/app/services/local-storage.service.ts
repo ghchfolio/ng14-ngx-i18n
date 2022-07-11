@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Resources } from '../models/Resources';
@@ -8,9 +8,10 @@ import { Resources } from '../models/Resources';
 export class LocalStorageService {
 
     currentLang = 'en-us';
-    page: string = '';
-    previousRoute = '';
-    currentRoute = '';
+    private currentPage: string = '';
+    private readonly translatedHeadersPath = 'assets/i18n/header';
+    private readonly translatedBodyPath = 'assets/i18n/body';
+    private readonly transatedFootersPath = 'assets/i18n/footer';
 
     constructor(private translateService: TranslateService, private router: Router) {
         this.checkLocalStorage();
@@ -20,7 +21,7 @@ export class LocalStorageService {
         .subscribe(
             (event: any) => {
                 if (event instanceof NavigationEnd) {
-                    this.page = event.urlAfterRedirects;
+                    this.currentPage = event.urlAfterRedirects;
                     this.getTranslatedContent();
                 }
             });
@@ -43,9 +44,9 @@ export class LocalStorageService {
     }
 
     getTranslatedContent() {
-        Resources.headerPartial = 'assets/i18n/header/' + this.currentLang + '.json';
-        Resources.bodyPartial = 'assets/i18n/body' + this.page + '/' + this.currentLang + '.json';
-        Resources.footerPartial = 'assets/i18n/footer/' + this.currentLang + '.json';
+        Resources.headerPartial = `${this.translatedHeadersPath}/${this.currentLang}.json`;
+        Resources.bodyPartial = `${this.translatedBodyPath}/${this.currentPage}/${this.currentLang}.json`;
+        Resources.footerPartial = `${this.transatedFootersPath}/${this.currentLang}.json`;
         this.translateService.use(this.currentLang);
     }
 
