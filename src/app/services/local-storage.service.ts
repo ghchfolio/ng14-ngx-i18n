@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { Resources } from '../models/Resources';
 @Injectable({
     providedIn: 'root'
 })
 export class LocalStorageService {
 
-    currentLang = 'en-us';
-    private currentPage: string = '';
-    private readonly translatedHeadersPath = 'assets/i18n/header';
-    private readonly translatedBodyPath = 'assets/i18n/body';
-    private readonly transatedFootersPath = 'assets/i18n/footer';
+    currentLang = '';
+    private currentPage = '';
 
     constructor(private translateService: TranslateService, private router: Router) {
         this.checkLocalStorage();
@@ -22,32 +18,42 @@ export class LocalStorageService {
             (event: any) => {
                 if (event instanceof NavigationEnd) {
                     this.currentPage = event.urlAfterRedirects;
-                    this.getTranslatedContent();
+                    localStorage['page'] = this.currentPage;
                 }
             });
 
-    langChangeSub = this.translateService.onLangChange
-        .subscribe(res => this.setLocalStorage(res.lang));
+    // langChangeSub = this.translateService.onLangChange
+    //     .subscribe((res: any) => {
+    // this.setLocalStorage(res.locale);
+    // this.currentLang = res.locale;
+    // this.getTranslatedContent();
+    //     console.log('>', res)
+    // }
+    // );
 
     checkLocalStorage() {
-        if (localStorage['languagePref'] && localStorage['languagePref'] !== undefined) {
-            this.currentLang = localStorage['languagePref'];
+        if (localStorage['locale'] && localStorage['locale'] !== 'undefined') {
+            this.currentLang = localStorage['locale'];
         } else {
             this.setLocalStorage(this.translateService.defaultLang);
+            this.currentLang = this.translateService.defaultLang;
         }
+        this.translateService.use(this.currentLang);
+        // this.getTranslatedContent();
     }
 
     setLocalStorage(languagePref: string) {
-        localStorage['languagePref'] = languagePref;
+        localStorage['locale'] = languagePref;
         this.currentLang = languagePref;
-        this.getTranslatedContent();
+        this.translateService.use(this.currentLang);
+        // this.getTranslatedContent();
     }
 
-    getTranslatedContent() {
-        Resources.headerPartial = `${this.translatedHeadersPath}/${this.currentLang}.json`;
-        Resources.bodyPartial = `${this.translatedBodyPath}/${this.currentPage}/${this.currentLang}.json`;
-        Resources.footerPartial = `${this.transatedFootersPath}/${this.currentLang}.json`;
-        this.translateService.use(this.currentLang);
-    }
+    // getTranslatedContent() {
+    // console.log('> going to use', this.currentLang, this.translateService.currentLang)
+    // debugger
+    // this.translateService.use(this.currentLang);
+    // this.translateService.setDefaultLang(this.currentLang);
+    // }
 
 }

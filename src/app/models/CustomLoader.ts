@@ -1,22 +1,31 @@
 import { HttpClient } from '@angular/common/http';
-import { TranslateLoader } from '@ngx-translate/core';
+import { TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { forkJoin, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Resources } from '../models/Resources';
+import { LocalStorageService } from '../services/local-storage.service';
 
 export class CustomLoader implements TranslateLoader {
 
     constructor(private http: HttpClient) { }
 
-    // We supply getTranslation with our own custom loader (the default loader only loads one resource).
-    // This will load multiple resources then join them into 1 json file.
     getTranslation(lang: string): Observable<any> {
-        const header$ = this.http.get(Resources.headerPartial);
-        const body$ = this.http.get(Resources.bodyPartial);
-        const footer$ = this.http.get(Resources.footerPartial);
 
-        return forkJoin({ header: header$, body: body$, footer: footer$ })
+        let header$ = new Observable();
+        let body$ = new Observable();
+        let footer$ = new Observable();
+
+        const page = localStorage['page'] || '/home';
+        header$ = this.http.get(`assets/i18n/header/${lang}.json`);
+        // body$ = this.http.get(`assets/i18n/body${page}/${lang}.json`);
+        footer$ = this.http.get(`assets/i18n/footer/${lang}.json`);
+
+        console.log('lang/pg', lang, page)
+
+        // return forkJoin({ header: header$, body: body$, footer: footer$ })
+        return forkJoin({ header: header$, footer: footer$ })
             .pipe(
+                tap((data) => console.log('data', data)),
                 map(data => data)
             );
     }

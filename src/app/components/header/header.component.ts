@@ -17,6 +17,7 @@ export class HeaderComponent {
         { locale: 'es-es', name: 'Spanish' }
     ];
 
+    // currentLang = this.cleanedCurrentLang(this.localStorageService.currentLang);
     currentLang = this.localStorageService.currentLang;
 
     constructor(
@@ -26,5 +27,14 @@ export class HeaderComponent {
     languageSelect(locale: string = 'us-en') {
         this.localStorageService.setLocalStorage(locale);
     }
+
+    // cleanedCurrentLang(str: string) {
+    //     if (str.includes('_')) {
+    //         let arr = str.split('_');
+    //         return arr[0];
+    //     } else {
+    //         return str;
+    //     }
+    // }
 
 }
