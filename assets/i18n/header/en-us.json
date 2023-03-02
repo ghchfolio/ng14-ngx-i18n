@@ -1,0 +1,15 @@
+{
+    "nav": {
+        "home": "Home",
+        "resources": "Resources",
+        "about": "About"
+    },
+    "dropdown": {
+        "title": "Choose a language",
+        "English": "English",
+        "French": "French",
+        "German": "German",
+        "Hebrew": "Hebrew",
+        "Spanish": "Spanish"
+    }
+}

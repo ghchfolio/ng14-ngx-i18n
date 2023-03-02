@@ -1,0 +1,28 @@
+{
+    "HEADER": {
+        "hamburger-icon-aria-label": "Navigation umschalten",
+        "nav": {
+            "home": "Heim",
+            "resources": "Ressourcen",
+            "about": "Über"
+        },
+        "dropdown": {
+            "title": "Wählen Sie eine Sprache",
+            "English": "Englisch",
+            "French": "Französisch",
+            "German": "Deutsch",
+            "Hebrew": "Hebräisch",
+            "Spanish": "Spanisch"
+        }
+    },
+    "HOME": {
+        "pageTitle": "Der Junge und die Haselnüsse",
+        "byLine": "von",
+        "image": {
+            "alt": "Haselnüsse"
+        },
+        "featuredStory": "<p>Einem Jungen wurde erlaubt, seine Hand in einen Krug zu stecken, um ein paar Haselnüsse zu bekommen. Aber er nahm eine so große Handvoll, dass er seine Hand nicht wieder herausziehen konnte. Da stand er, unwillig, eine einzige Haselnuss herzugeben, und doch unfähig, sie alle auf einmal herauszuholen. Verärgert und enttäuscht begann er zu weinen.</p><p>&quot;Mein Junge,&quot; sagte seine Mutter, &quot;Seien Sie mit der Hälfte der Nüsse zufrieden, die Sie genommen haben, und Sie werden Ihre Hand leicht herausbekommen. Dann können Sie vielleicht ein andermal mehr Haselnüsse haben.&quot;</p><p><em>Versuchen Sie nicht zu viel auf einmal.</em></p>"
+    },
+    "ABOUT": "<p>Diese Angular 14-App ist ein Machbarkeitsnachweis und verwendet das ngx-translate-Paket, um die Kopie zu übersetzen.</p><p>Diese ist für die Verwendung unter <a href=\"https://www.istation.com\" target=\"_blank\" rel=\"noopener noreferrer\">iStation.com</a>.</p><p>Siehe unsere <a href=\"https://www.station.com/SupportFAQ\" target=\"_blank\" rel=\"noopener noreferrer\">schnelle Tipps und häufig gestellte Fragen</a> für Hilfe beim Einstieg.</p><p>Müssen Sie Istation herunterladen ? Gehen Sie zu unserer Seite <a href=\"https://www.istation.com/Support/FAQ\" target=\"_blank\" rel=\"noopener noreferrer\">Download und technische Informationen</a>. </p>",
+    "FOOTER": "Urheberrecht"
+}

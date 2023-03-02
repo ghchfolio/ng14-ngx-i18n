@@ -1,0 +1,28 @@
+{
+    "HEADER": {
+        "hamburger-icon-aria-label": "Basculer la navigation",
+        "nav": {
+            "home": "Maison",
+            "resources": "Ressources",
+            "about": "À propos de"
+        },
+        "dropdown": {
+            "title": "Choisissez une langue",
+            "English": "Anglais",
+            "French": "Français",
+            "German": "Allemand",
+            "Hebrew": "Hébreu",
+            "Spanish": "Espagnol"
+        }
+    },
+    "HOME": {
+        "pageTitle": "Le garçon et les Avelines",
+        "byLine": "par",
+        "image": {
+            "alt": "Avelines"
+        },
+        "featuredStory": "<p>Un garçon a reçu la permission de mettre sa main dans un pichet pour obtenir des avelines. Mais il en prit une si grande poignée qu'il ne put plus retirer sa main. Il se tenait là, ne voulant pas abandonner un seul aveline et pourtant incapable de les sortir tous d'un coup. Vexé et déçu, il se mit à pleurer.</p><p>&quot;Mon garçon,&quot; dit sa mère, &quot;contentez-vous de la moitié des noix que vous avez prises et vous sortirez facilement votre main. Alors peut-être aurez-vous encore quelques avelines une autre fois.&quot;</p><p><em>N'essayez pas trop à la fois.</em></p>"
+    },
+    "ABOUT": "<p>Cette application Angular 14 est une preuve de concept et utilise le package ngx-translate pour traduire la copie.</p><p>Ceci est destiné à être utilisé sur <a href=\"https://www.istation.com\" target=\"_blank\" rel=\"noopener noreferrer\">iStation.com</a>.</p><p>Consultez notre <a href=\"https://www.istation.com/SupportFAQ\" target=\"_blank\" rel=\"noopener noreferrer\">conseils rapides et questions fréquemment posées</a> pour vous aider à démarrer.</p><p>Avez-vous besoin de télécharger Istation ? Accédez à notre page <a href=\"https://www.istation.com/Support/FAQ\" target=\"_blank\" rel=\"noopener noreferrer\">Téléchargement et informations techniques</a>.</p>",
+    "FOOTER": "Droits d'auteur"
+}
