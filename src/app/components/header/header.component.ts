@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
@@ -17,24 +16,14 @@ export class HeaderComponent {
         { locale: 'es-es', name: 'Spanish' }
     ];
 
-    // currentLang = this.cleanedCurrentLang(this.localStorageService.currentLang);
     currentLang = this.localStorageService.currentLang;
 
     constructor(
-        private localStorageService: LocalStorageService, private translateService: TranslateService) {
+        private localStorageService: LocalStorageService) {
     }
 
     languageSelect(locale: string = 'us-en') {
         this.localStorageService.setLocalStorage(locale);
     }
-
-    // cleanedCurrentLang(str: string) {
-    //     if (str.includes('_')) {
-    //         let arr = str.split('_');
-    //         return arr[0];
-    //     } else {
-    //         return str;
-    //     }
-    // }
 
 }

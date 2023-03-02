@@ -46,6 +46,7 @@ export class LocalStorageService {
         localStorage['locale'] = languagePref;
         this.currentLang = languagePref;
         this.translateService.use(this.currentLang);
+        this.translateService.setDefaultLang(this.currentLang);
         // this.getTranslatedContent();
     }
 
